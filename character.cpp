@@ -1,6 +1,7 @@
 #include "character.h"
 #include <iostream>
 #include <fstream>
+#include <string>
 
 Character::Character(){
 	this->name = "";

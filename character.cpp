@@ -56,7 +56,6 @@ void Character::attack(Character &c)
 void Character::takeDamage(Character& player, Character& enemy){
 	double t1 = 0.0;
 	double t2 = 0.0;
-	std::string out;
 	while (enemy.isAlive() && player.isAlive()) {
 		if (t1 < t2) {
 			enemy.attack(player);
@@ -73,16 +72,16 @@ void Character::takeDamage(Character& player, Character& enemy){
 			t2 += enemy.attackcooldown;
 		}
 		else {
-			enemy.attack(player);
-			if (!player.isAlive()) {
-				std::cout<<enemy.getName()<<" wins. Remaining HP: "<< enemy.getHp() + '\n';
-			}
-			t1 += enemy.attackcooldown;
 			player.attack(enemy);
 			if (!enemy.isAlive()) {
 				std::cout<<player.getName()<<" wins. Remaining HP: "<< player.getHp() + '\n';
 			}
 			t2 += player.attackcooldown;
+			enemy.attack(player);
+			if (!player.isAlive()) {
+				std::cout<<enemy.getName()<<" wins. Remaining HP: "<< enemy.getHp() + '\n';
+			}
+			t1 += enemy.attackcooldown;
 		}
 	}
 }

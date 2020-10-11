@@ -21,11 +21,14 @@ private:
     std::string name; ///< This is the name of the player.
     int hp;///< This is the health points of the player.
     int dmg;///<This is the damage of the player.
+    /// This function is doing the attacks and setting up the health points of the players.
+    void attack(Character &c/** [in] This is the created palyer*/);
+    double attackcooldown;
 public:
     /// It's a basic constructor of the class.
     Character(/**< [in] There's no parameter in this contructor*/);
     /// This contructor is setting up the private variables.
-    Character(std::string name/** [in] Name of the player.*/, int hp/** [in] Health points of the player.*/, int dmg/** [in] Damage of the player.*/);
+    Character(std::string name/** [in] Name of the player.*/, int hp/** [in] Health points of the player.*/, int dmg/** [in] Damage of the player.*/, double attackcooldown);
     /// Its's a simple getter, returns with the name of te player.
     std::string getName(/**< [in] There's no parameter in this getter*/) const;
     /// Its's a simple getter, returns with the healt points of te player.
@@ -34,8 +37,8 @@ public:
     int getDmg(/**< [in] There's no parameter in this getter*/) const;
     /// This function is chechking the hp of the players. If it's 0, return false, else true.
     bool isAlive(/**< [in] There's no parameter in this getter*/) const;
-    /// This function is doing the attacks and setting up the health points of the players.
-    void attack(Character &c/** [in] This is the created palyer*/);
+    double getAttackcooldown() const;
+    void takeDamage(Character& enemy, Character& player);
     /// This method manage the input datas from the .json file
 	static void parseUnit(Character &C/** [in] This is the cerated player*/, std::string charSheetName/** This is the string for the .json file name*/);
     /// This is the friend of the class and overload the "cout".

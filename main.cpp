@@ -11,20 +11,7 @@ int main(int argc, char* argv[]) {
 		Character::parseUnit(player, units_folder + argv[1]);
 		Character enemy;
 		Character::parseUnit(enemy, units_folder + argv[2]);
-
-		while (enemy.isAlive() && player.isAlive()) {
-			player.attack(enemy);
-			// Enemy dead
-			if (!enemy.isAlive()) {
-				cout << player.getName() << " wins. Remaining HP: " << player.getHp() << '\n';
-				break;
-			}
-			enemy.attack(player);
-			// Player dead
-			if (!player.isAlive()) {
-				cout << enemy.getName() << " wins. Remaining HP: " << enemy.getHp() << '\n';
-			}
-		}
+		enemy.takeDamage(enemy,player);
 	}
 	catch (std::exception &e) {
 		std::cerr << e.what() << '\n';

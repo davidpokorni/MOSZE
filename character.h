@@ -1,11 +1,15 @@
 /**
  * \class Character
+ * 
  * \brief Character class
+ * 
  * This is the Character class. In this class there is a constructor, which is setting up
  * the variables. There are four simple getter functions. In here we generating a fight between two player and
  * chechking who is the winner in each fights. There is a parseUnit function for the .json input files.
  * Finally there's a operator overloding to the output.
+ * 
  * \author davidpokorni
+ * 
  * \date 2020/10/11 11:17
 */
 #ifndef CHARACTER_H

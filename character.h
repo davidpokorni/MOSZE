@@ -42,7 +42,7 @@ public:
     double getAttackcooldown() const;
     /// This function is making the fights, using in main.
     void takeDamage(Character& enemy, Character& player);
-    /// This method manage the input datas from the .json file
+    /// This method manage the input datas from the .json file.
 	static void parseUnit(Character &C/** [in] This is the cerated player*/, std::string charSheetName/** This is the string for the .json file name*/);
     /// This is the friend of the class and overload the "cout".
     friend std::ostream & operator<<(std::ostream & os/** [in] This is a ostream referenc to the output*/, const Character &C /**This class what the program print out*/);

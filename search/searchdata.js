@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "cgiops",
+  0: "cgiopst",
   1: "c",
-  2: "cgip",
+  2: "cgipt",
   3: "o",
   4: "s"
 };

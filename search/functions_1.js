@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['character',['Character',['../class_character.html#adc27bdd255876169bad2ed0bae0cffb5',1,'Character::Character()'],['../class_character.html#a70e102cad833c360bceb129b6af42000',1,'Character::Character(std::string name, int hp, int dmg)']]]
+  ['getdmg',['getDmg',['../class_character.html#a15d3e818fdfa9fd106a51183e4b7a25d',1,'Character']]],
+  ['gethp',['getHp',['../class_character.html#a5498d08a9dbfa968420ea8f5cb98ec3d',1,'Character']]],
+  ['getname',['getName',['../class_character.html#ad79f892fe576c7ef0804cad502d94517',1,'Character']]]
 ];

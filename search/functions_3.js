@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isalive',['isAlive',['../class_character.html#aced814c6549d4243897ab976d243bd5c',1,'Character']]]
+  ['parseunit',['parseUnit',['../class_character.html#a0948eef78554c1e72927b8760a17c29c',1,'Character']]]
 ];

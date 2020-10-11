@@ -80,9 +80,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#adc27bdd255876169bad2ed0bae0cffb5">Character</a> ()</td></tr>
 <tr class="memdesc:adc27bdd255876169bad2ed0bae0cffb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">It's a basic constructor of the class. <br /></td></tr>
 <tr class="separator:adc27bdd255876169bad2ed0bae0cffb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70e102cad833c360bceb129b6af42000"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a70e102cad833c360bceb129b6af42000">Character</a> (std::string name, int hp, int dmg)</td></tr>
-<tr class="memdesc:a70e102cad833c360bceb129b6af42000"><td class="mdescLeft">&#160;</td><td class="mdescRight">This contructor is setting up the private variables.  <a href="#a70e102cad833c360bceb129b6af42000">More...</a><br /></td></tr>
-<tr class="separator:a70e102cad833c360bceb129b6af42000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e9a6919c1844873032e2e8af9ea39e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a31e9a6919c1844873032e2e8af9ea39e">Character</a> (std::string name, int hp, int dmg, double attackcooldown)</td></tr>
+<tr class="memdesc:a31e9a6919c1844873032e2e8af9ea39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This contructor is setting up the private variables.  <a href="#a31e9a6919c1844873032e2e8af9ea39e">More...</a><br /></td></tr>
+<tr class="separator:a31e9a6919c1844873032e2e8af9ea39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad79f892fe576c7ef0804cad502d94517"><td class="memItemLeft" align="right" valign="top"><a id="ad79f892fe576c7ef0804cad502d94517"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#ad79f892fe576c7ef0804cad502d94517">getName</a> () const</td></tr>
 <tr class="memdesc:ad79f892fe576c7ef0804cad502d94517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Its's a simple getter, returns with the name of te player. <br /></td></tr>
@@ -99,9 +99,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#aced814c6549d4243897ab976d243bd5c">isAlive</a> () const</td></tr>
 <tr class="memdesc:aced814c6549d4243897ab976d243bd5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is chechking the hp of the players. If it's 0, return false, else true. <br /></td></tr>
 <tr class="separator:aced814c6549d4243897ab976d243bd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb28a14aaf4fc61f88a0bc8aed817c9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#adb28a14aaf4fc61f88a0bc8aed817c9a">attack</a> (<a class="el" href="class_character.html">Character</a> &amp;c)</td></tr>
-<tr class="memdesc:adb28a14aaf4fc61f88a0bc8aed817c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is doing the attacks and setting up the health points of the players.  <a href="#adb28a14aaf4fc61f88a0bc8aed817c9a">More...</a><br /></td></tr>
-<tr class="separator:adb28a14aaf4fc61f88a0bc8aed817c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55cc7acf3578c1db76725797c566b98"><td class="memItemLeft" align="right" valign="top"><a id="ad55cc7acf3578c1db76725797c566b98"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getAttackcooldown</b> () const</td></tr>
+<tr class="separator:ad55cc7acf3578c1db76725797c566b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29a2a7d3bf6064268bb888b6e5536cb"><td class="memItemLeft" align="right" valign="top"><a id="ac29a2a7d3bf6064268bb888b6e5536cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>takeDamage</b> (<a class="el" href="class_character.html">Character</a> &amp;enemy, <a class="el" href="class_character.html">Character</a> &amp;player)</td></tr>
+<tr class="separator:ac29a2a7d3bf6064268bb888b6e5536cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -121,8 +124,8 @@ Friends</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>davidpokorni</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020/10/11 11:17 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a70e102cad833c360bceb129b6af42000"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70e102cad833c360bceb129b6af42000">&#9670;&nbsp;</a></span>Character()</h2>
+<a id="a31e9a6919c1844873032e2e8af9ea39e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e9a6919c1844873032e2e8af9ea39e">&#9670;&nbsp;</a></span>Character()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +146,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dmg</em>&#160;</td>
+          <td class="paramname"><em>dmg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>attackcooldown</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -166,32 +175,6 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adb28a14aaf4fc61f88a0bc8aed817c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb28a14aaf4fc61f88a0bc8aed817c9a">&#9670;&nbsp;</a></span>attack()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Character::attack </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_character.html">Character</a> &amp;&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This function is doing the attacks and setting up the health points of the players. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>This is the created palyer </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a0948eef78554c1e72927b8760a17c29c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0948eef78554c1e72927b8760a17c29c">&#9670;&nbsp;</a></span>parseUnit()</h2>
 
